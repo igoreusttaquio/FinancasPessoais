@@ -29,9 +29,9 @@ partial class ContaModal
     private void InitializeComponent()
     {
         tableLayoutPanel1 = new TableLayoutPanel();
-        inputTexto3 = new UI.Componentes.InputTexto();
-        inputTexto1 = new UI.Componentes.InputTexto();
-        ComboTipoContas = new UI.Componentes.InputCombo();
+        Saldo = new UI.Componentes.InputTexto();
+        NomeConta = new UI.Componentes.InputTexto();
+        ComboTipoConta = new UI.Componentes.InputCombo();
         botaoPrimario1 = new UI.Componentes.BotaoPrimario();
         tableLayoutPanel1.SuspendLayout();
         SuspendLayout();
@@ -40,9 +40,9 @@ partial class ContaModal
         // 
         tableLayoutPanel1.ColumnCount = 1;
         tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-        tableLayoutPanel1.Controls.Add(inputTexto3, 0, 2);
-        tableLayoutPanel1.Controls.Add(inputTexto1, 0, 0);
-        tableLayoutPanel1.Controls.Add(ComboTipoContas, 0, 1);
+        tableLayoutPanel1.Controls.Add(Saldo, 0, 2);
+        tableLayoutPanel1.Controls.Add(NomeConta, 0, 0);
+        tableLayoutPanel1.Controls.Add(ComboTipoConta, 0, 1);
         tableLayoutPanel1.Controls.Add(botaoPrimario1, 0, 3);
         tableLayoutPanel1.Dock = DockStyle.Fill;
         tableLayoutPanel1.Location = new Point(10, 10);
@@ -55,35 +55,35 @@ partial class ContaModal
         tableLayoutPanel1.Size = new Size(672, 208);
         tableLayoutPanel1.TabIndex = 0;
         // 
-        // inputTexto3
+        // Saldo
         // 
-        inputTexto3.Dock = DockStyle.Fill;
-        inputTexto3.Label = "Saldo";
-        inputTexto3.Location = new Point(3, 107);
-        inputTexto3.Name = "inputTexto3";
-        inputTexto3.Size = new Size(666, 46);
-        inputTexto3.TabIndex = 2;
-        inputTexto3.Texto = "";
+        Saldo.Dock = DockStyle.Fill;
+        Saldo.Label = "Saldo";
+        Saldo.Location = new Point(3, 107);
+        Saldo.Name = "Saldo";
+        Saldo.Size = new Size(666, 46);
+        Saldo.TabIndex = 2;
+        Saldo.Texto = "";
         // 
-        // inputTexto1
+        // NomeConta
         // 
-        inputTexto1.Dock = DockStyle.Fill;
-        inputTexto1.Label = "Nome";
-        inputTexto1.Location = new Point(3, 3);
-        inputTexto1.Name = "inputTexto1";
-        inputTexto1.Size = new Size(666, 46);
-        inputTexto1.TabIndex = 0;
-        inputTexto1.Texto = "";
+        NomeConta.Dock = DockStyle.Fill;
+        NomeConta.Label = "Nome";
+        NomeConta.Location = new Point(3, 3);
+        NomeConta.Name = "NomeConta";
+        NomeConta.Size = new Size(666, 46);
+        NomeConta.TabIndex = 0;
+        NomeConta.Texto = "";
         // 
-        // ComboTipoContas
+        // ComboTipoConta
         // 
-        ComboTipoContas.Dock = DockStyle.Fill;
-        ComboTipoContas.Label = "Tipo";
-        ComboTipoContas.Location = new Point(3, 55);
-        ComboTipoContas.Name = "ComboTipoContas";
-        ComboTipoContas.Size = new Size(666, 46);
-        ComboTipoContas.TabIndex = 3;
-        ComboTipoContas.Valor = null;
+        ComboTipoConta.Dock = DockStyle.Fill;
+        ComboTipoConta.Label = "Tipo";
+        ComboTipoConta.Location = new Point(3, 55);
+        ComboTipoConta.Name = "ComboTipoConta";
+        ComboTipoConta.Size = new Size(666, 46);
+        ComboTipoConta.TabIndex = 3;
+        ComboTipoConta.Valor = null;
         // 
         // botaoPrimario1
         // 
@@ -99,6 +99,7 @@ partial class ContaModal
         botaoPrimario1.TabIndex = 1;
         botaoPrimario1.Text = "Adicionar Conta";
         botaoPrimario1.UseVisualStyleBackColor = false;
+        botaoPrimario1.Click += botaoPrimario1_Click;
         // 
         // ContaModal
         // 
@@ -118,8 +119,8 @@ partial class ContaModal
     #endregion
 
     private TableLayoutPanel tableLayoutPanel1;
-    private Componentes.InputTexto inputTexto3;
-    private Componentes.InputTexto inputTexto1;
-    private Componentes.InputCombo ComboTipoContas;
+    private Componentes.InputTexto Saldo;
+    private Componentes.InputTexto NomeConta;
+    private Componentes.InputCombo ComboTipoConta;
     private Componentes.BotaoPrimario botaoPrimario1;
 }
