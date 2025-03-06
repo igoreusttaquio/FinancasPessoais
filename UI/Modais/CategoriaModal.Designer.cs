@@ -1,4 +1,4 @@
-﻿namespace UI.Modal
+﻿namespace UI.Modais
 {
     partial class CategoriaModal
     {
@@ -54,6 +54,7 @@
             // 
             // TipoCategoria
             // 
+            TipoCategoria.Label = "Tipo";
             TipoCategoria.Location = new Point(3, 64);
             TipoCategoria.Name = "TipoCategoria";
             TipoCategoria.Size = new Size(470, 48);
@@ -62,6 +63,7 @@
             // 
             // NomeCategoria
             // 
+            NomeCategoria.Label = "Nome";
             NomeCategoria.Location = new Point(3, 3);
             NomeCategoria.Name = "NomeCategoria";
             NomeCategoria.Size = new Size(470, 53);

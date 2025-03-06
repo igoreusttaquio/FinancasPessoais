@@ -1,6 +1,5 @@
-﻿using System.Linq;
-using Core.Dados;
-using UI.Modal;
+﻿using Core.Dados;
+using UI.Modais;
 
 namespace UI
 {

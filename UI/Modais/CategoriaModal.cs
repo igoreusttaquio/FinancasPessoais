@@ -1,7 +1,7 @@
 ﻿using Core.Dados;
 using UI.Services;
 
-namespace UI.Modal
+namespace UI.Modais
 {
     public partial class CategoriaModal : Form
     {

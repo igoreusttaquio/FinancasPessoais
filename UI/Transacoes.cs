@@ -1,4 +1,4 @@
-﻿using UI.Modal;
+﻿using UI.Modais;
 
 namespace UI
 {
