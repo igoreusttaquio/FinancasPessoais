@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI.Modal
 {
-    public partial class Conta : Form
+    public partial class ContaModal : Form
     {
-        public Conta()
+        public ContaModal()
         {
             InitializeComponent();
         }

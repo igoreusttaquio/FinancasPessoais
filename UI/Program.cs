@@ -1,4 +1,5 @@
 using Core;
+using Core.Dados;
 using EmbeddedForms;
 using Microsoft.Extensions.DependencyInjection;
 using UI.Modal;
@@ -15,25 +16,33 @@ namespace UI
         {
             var services = new ServiceCollection();
             services.AdicionarCore();
-            ConfigureServices(services);
+            ConfigureFormularios(services);
             var serviceProvider = services.BuildServiceProvider();
 
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+            MigradorBancoDados.Migrar(serviceProvider);
             Application.Run(serviceProvider.GetRequiredService<Main>());
         }
 
-        static void ConfigureServices(IServiceCollection services)
+        static void ConfigureFormularios(IServiceCollection servicos)
         {
-            services.AddTransient<Main>();
-            services.AddTransient<DashBoard>();
-            services.AddTransient<Contas>();
-            services.AddTransient<Transacoes>();
-            services.AddTransient<Categorias>();
-            services.AddTransient<Categoria>();
-            services.AddSingleton<IDateTimeProvider, DateTimeProvider>(); // Example service
-            services.AddSingleton<INavigationService, NavigationService>();
+            servicos.AddTransient<Main>();
+            servicos.AddTransient<DashBoard>();
+            servicos.AddTransient<Contas>();
+            servicos.AddTransient<Transacoes>();
+            servicos.AddTransient<Categorias>();
+            servicos.AddSingleton<IDateTimeProvider, DateTimeProvider>(); // Example service
+            servicos.AddSingleton<INavigationService, NavigationService>();
+            IncluirModais(servicos);
+        }
+
+        static void IncluirModais(IServiceCollection servicos)
+        {
+            servicos.AddTransient<CategoriaModal>();
+            servicos.AddTransient<TransacaoModal>();
+            servicos.AddTransient<ContaModal>();
         }
     }
 }

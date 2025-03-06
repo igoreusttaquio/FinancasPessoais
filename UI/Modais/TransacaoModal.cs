@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI.Modal
 {
-    public partial class Transacao : Form
+    public partial class TransacaoModal : Form
     {
-        public Transacao()
+        public TransacaoModal()
         {
             InitializeComponent();
         }

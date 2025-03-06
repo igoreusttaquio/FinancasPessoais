@@ -24,6 +24,15 @@ public partial class InputCombo : UserControl
         }
     }
 
+    [Browsable(true)]  // Propriedade visível no PropertyGrid
+    [Category("Customizados")]
+    [Description("Label que será exibido no input.")]
+    public string Label
+    {
+        get => Titulo.Text;
+        set => Titulo.Text = value;
+    }
+
     public void DefinirValores(params object[] valores)
     {
         Combo.Items.Clear();

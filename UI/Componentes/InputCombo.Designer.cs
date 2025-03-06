@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            Label = new Label();
+            Titulo = new Label();
             Combo = new ComboBox();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -39,7 +39,7 @@
             tableLayoutPanel1.BackColor = Color.FromArgb(31, 41, 55);
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(Label, 0, 0);
+            tableLayoutPanel1.Controls.Add(Titulo, 0, 0);
             tableLayoutPanel1.Controls.Add(Combo, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
@@ -50,17 +50,17 @@
             tableLayoutPanel1.Size = new Size(583, 53);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // Label
+            // Titulo
             // 
-            Label.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            Label.AutoSize = true;
-            Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            Label.ForeColor = SystemColors.Control;
-            Label.Location = new Point(3, 2);
-            Label.Name = "Label";
-            Label.Size = new Size(577, 15);
-            Label.TabIndex = 1;
-            Label.Text = "Label";
+            Titulo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            Titulo.AutoSize = true;
+            Titulo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            Titulo.ForeColor = SystemColors.Control;
+            Titulo.Location = new Point(3, 2);
+            Titulo.Name = "Titulo";
+            Titulo.Size = new Size(577, 15);
+            Titulo.TabIndex = 1;
+            Titulo.Text = "Label";
             // 
             // Combo
             // 
@@ -89,7 +89,7 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private Label Label;
+        private Label Titulo;
         private ComboBox Combo;
     }
 }

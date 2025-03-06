@@ -11,7 +11,7 @@ namespace UI
 
         private void BtnAdicionarTransacao_Click(object sender, EventArgs e)
         {
-            new Transacao().ShowDialog(); ;
+            new TransacaoModal().ShowDialog(); ;
         }
     }
 }

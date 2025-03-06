@@ -20,7 +20,7 @@ namespace UI
 
         private void botaoPrimario1_Click(object sender, EventArgs e)
         {
-            new Conta().ShowDialog();
+            new ContaModal().ShowDialog();
         }
     }
 }

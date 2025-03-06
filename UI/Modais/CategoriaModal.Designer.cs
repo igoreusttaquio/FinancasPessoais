@@ -1,6 +1,6 @@
 ﻿namespace UI.Modal
 {
-    partial class Categoria
+    partial class CategoriaModal
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            TipoCategoria = new Componentes.InputCombo();
-            NomeCategoria = new Componentes.InputTexto();
-            botaoPrimario1 = new Componentes.BotaoPrimario();
+            TipoCategoria = new UI.Componentes.InputCombo();
+            NomeCategoria = new UI.Componentes.InputTexto();
+            BotaoAdicionarCategoria = new UI.Componentes.BotaoPrimario();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,7 +41,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(TipoCategoria, 0, 1);
             tableLayoutPanel1.Controls.Add(NomeCategoria, 0, 0);
-            tableLayoutPanel1.Controls.Add(botaoPrimario1, 0, 2);
+            tableLayoutPanel1.Controls.Add(BotaoAdicionarCategoria, 0, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(10, 10);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -68,30 +68,30 @@
             NomeCategoria.TabIndex = 1;
             NomeCategoria.Texto = "";
             // 
-            // botaoPrimario1
+            // BotaoAdicionarCategoria
             // 
-            botaoPrimario1.Anchor = AnchorStyles.Right;
-            botaoPrimario1.BackColor = Color.FromArgb(100, 111, 229);
-            botaoPrimario1.FlatAppearance.BorderSize = 0;
-            botaoPrimario1.FlatStyle = FlatStyle.Flat;
-            botaoPrimario1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            botaoPrimario1.ForeColor = Color.FromArgb(5, 6, 63);
-            botaoPrimario1.Location = new Point(339, 127);
-            botaoPrimario1.Name = "botaoPrimario1";
-            botaoPrimario1.Size = new Size(134, 34);
-            botaoPrimario1.TabIndex = 1;
-            botaoPrimario1.Text = "Adicionar Categoria";
-            botaoPrimario1.UseVisualStyleBackColor = false;
-            botaoPrimario1.Click += botaoPrimario1_Click;
+            BotaoAdicionarCategoria.Anchor = AnchorStyles.Right;
+            BotaoAdicionarCategoria.BackColor = Color.FromArgb(100, 111, 229);
+            BotaoAdicionarCategoria.FlatAppearance.BorderSize = 0;
+            BotaoAdicionarCategoria.FlatStyle = FlatStyle.Flat;
+            BotaoAdicionarCategoria.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            BotaoAdicionarCategoria.ForeColor = Color.FromArgb(5, 6, 63);
+            BotaoAdicionarCategoria.Location = new Point(339, 127);
+            BotaoAdicionarCategoria.Name = "BotaoAdicionarCategoria";
+            BotaoAdicionarCategoria.Size = new Size(134, 34);
+            BotaoAdicionarCategoria.TabIndex = 1;
+            BotaoAdicionarCategoria.Text = "Adicionar Categoria";
+            BotaoAdicionarCategoria.UseVisualStyleBackColor = false;
+            BotaoAdicionarCategoria.Click += botaoPrimario1_Click;
             // 
-            // Categoria
+            // CategoriaModal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(31, 41, 55);
             ClientSize = new Size(496, 194);
             Controls.Add(tableLayoutPanel1);
-            Name = "Categoria";
+            Name = "CategoriaModal";
             Padding = new Padding(10);
             StartPosition = FormStartPosition.CenterParent;
             Text = "Categoria";
@@ -104,6 +104,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Componentes.InputCombo TipoCategoria;
         private Componentes.InputTexto NomeCategoria;
-        private Componentes.BotaoPrimario botaoPrimario1;
+        private Componentes.BotaoPrimario BotaoAdicionarCategoria;
     }
 }

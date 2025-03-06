@@ -1,6 +1,6 @@
 ﻿namespace UI.Modal
 {
-    partial class Conta
+    partial class ContaModal
     {
         /// <summary>
         /// Required designer variable.

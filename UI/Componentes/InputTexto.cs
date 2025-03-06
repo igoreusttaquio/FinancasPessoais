@@ -23,5 +23,15 @@ namespace UI.Componentes
                 }
             }
         }
+
+        [Browsable(true)]  // Propriedade visível no PropertyGrid
+        [Category("Customizados")]
+        [Description("Label que será exibido no input.")]
+        public string Label
+        {
+            get => Titulo.Text;
+            set => Titulo.Text = value;
+        }
+
     }
 }

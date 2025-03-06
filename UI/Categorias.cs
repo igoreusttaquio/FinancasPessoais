@@ -6,10 +6,10 @@ namespace UI
 {
     public partial class Categorias : Form
     {
-        Categoria _modalCategoria;
+        CategoriaModal _modalCategoria;
         BancoDadosContexto _bancoDadosContexto;
         public Categorias(
-            Categoria modal,
+            CategoriaModal modal,
             BancoDadosContexto bancoDadosContexto)
         {
             InitializeComponent();

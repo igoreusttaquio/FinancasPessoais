@@ -3,11 +3,11 @@ using UI.Services;
 
 namespace UI.Modal
 {
-    public partial class Categoria : Form
+    public partial class CategoriaModal : Form
     {
         private readonly BancoDadosContexto _bancoDadosContexto;
         private readonly IDateTimeProvider _dateTimeProvider;
-        public Categoria(
+        public CategoriaModal(
             BancoDadosContexto bancoDadosContexto,
             IDateTimeProvider dateTimeProvider
             )

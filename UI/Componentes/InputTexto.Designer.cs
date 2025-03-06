@@ -30,7 +30,7 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             Input = new TextBox();
-            Label = new Label();
+            Titulo = new Label();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -40,7 +40,7 @@
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(Input, 0, 1);
-            tableLayoutPanel1.Controls.Add(Label, 0, 0);
+            tableLayoutPanel1.Controls.Add(Titulo, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -63,17 +63,17 @@
             Input.Size = new Size(577, 25);
             Input.TabIndex = 0;
             // 
-            // Label
+            // Titulo
             // 
-            Label.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            Label.AutoSize = true;
-            Label.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            Label.ForeColor = SystemColors.Control;
-            Label.Location = new Point(3, 2);
-            Label.Name = "Label";
-            Label.Size = new Size(577, 15);
-            Label.TabIndex = 1;
-            Label.Text = "Label";
+            Titulo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            Titulo.AutoSize = true;
+            Titulo.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            Titulo.ForeColor = SystemColors.Control;
+            Titulo.Location = new Point(3, 2);
+            Titulo.Name = "Titulo";
+            Titulo.Size = new Size(577, 15);
+            Titulo.TabIndex = 1;
+            Titulo.Text = "Label";
             // 
             // InputTexto
             // 
@@ -91,6 +91,6 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private TextBox Input;
-        private Label Label;
+        private Label Titulo;
     }
 }
