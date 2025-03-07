@@ -4,18 +4,28 @@ namespace Core.Entidades;
 
 public class Conta
 {
-    public int ContaId { get; set; }
-    public int UsuarioId { get; set; }
-    public string NomeConta { get; set; }
-    public string TipoConta { get; set; }
+    public Guid Id { get; set; }
+    //public Guid UsuarioId { get; set; }
+    public string NomeConta { get; set; } = string.Empty;
+    public string TipoConta { get; set; } = string.Empty;
     public decimal Saldo { get; set; }
     public DateTime CriadoEm { get; set; }
 
+    public void Sacar(decimal valor)
+    {
+        Saldo -= valor;
+    }
+
+    public void Depositar(decimal valor)
+    {
+        Saldo += valor;
+    }
+
     // Relacionamento com o usuário
-    //public Usuario Usuario { get; set; }
+    //public Usuario? Usuario { get; set; }
 
     // Relacionamento com as transações
-    public ICollection<Transacao> Transacoes { get; set; }
+    public ICollection<Transacao>? Transacoes { get; set; }
 
     public static TipoConta[] TiposContas = [
              new TipoConta("corrente", "Conta Corrente"),
@@ -29,4 +39,9 @@ public class Conta
              new TipoConta("investimento", "Conta Investimento"),
              new TipoConta("internacional", "Conta Internacional")
         ];
+
+    public override string ToString()
+    {
+        return NomeConta;
+    }
 }

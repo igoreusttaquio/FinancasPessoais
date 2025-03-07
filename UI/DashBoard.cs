@@ -1,15 +1,21 @@
-﻿using static UI.Utils.TabelaExtencoes;
+﻿using System.Globalization;
+using Core.Dados;
+using Microsoft.EntityFrameworkCore;
+using static UI.Utils.TabelaExtencoes;
 
 namespace EmbeddedForms
 {
     public partial class DashBoard : Form
     {
-        public DashBoard()
+        BancoDadosContexto _bancoDadosContexto { get; set; }
+        public DashBoard(BancoDadosContexto bancoDadosContexto)
         {
             InitializeComponent();
             TabelaAtividadesRecentes.DesabilitarGeracaoAutomaticaColunas();
+            _bancoDadosContexto = bancoDadosContexto;
 
             AdicionarDadosFicticios();
+            PreencherCards();
         }
 
         private void AdicionarDadosFicticios()
@@ -69,6 +75,17 @@ namespace EmbeddedForms
             };
 
             TabelaAtividadesRecentes.DataSource = datas;
+        }
+
+        private async void PreencherCards()
+        {
+            int totalTransacoes = await _bancoDadosContexto.Transacoes.CountAsync();
+            decimal totalContas = await _bancoDadosContexto.Contas.SumAsync(c => c.Saldo);
+            decimal saldoDespesas = await _bancoDadosContexto.Transacoes.Where(t=> t.Categoria.TipoCategoria.ToLower() == "despesa").SumAsync(t => t.Valor);
+           
+            CardTotalTransacoes.DetralheCard = totalTransacoes > 1 ? $"{totalTransacoes} Transações" : $"{totalTransacoes} Transação";
+            CardTotalContas.DetralheCard = totalContas.ToString("C2", new CultureInfo("pt-BR"));
+            CardSaldoTotal.DetralheCard = saldoDespesas.ToString("C2", new CultureInfo("pt-BR"));
         }
     }
 }

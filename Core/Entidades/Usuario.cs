@@ -2,9 +2,9 @@
 
 public class Usuario
 {
-    Guid UsuarioId { get; set; }
-    string Login { get; set; }
-    string Nome { get; set; }
-    byte[] SaltoSenha { get; set; }
-    string HashSenha { get; set; }
+    public Guid Id { get; set; }
+    public string Login { get; set; }
+    public string Nome { get; set; }
+    public byte[] SaltoSenha { get; set; }
+    public string HashSenha { get; set; }
 }

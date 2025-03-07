@@ -1,4 +1,5 @@
 ﻿using Core.Dados;
+using Core.Entidades;
 using UI.Services;
 
 namespace UI.Modais
@@ -27,7 +28,7 @@ namespace UI.Modais
         {
             var categoria = new Core.Entidades.Categoria
             {
-                CategoriaId = Guid.NewGuid(),
+                Id = Guid.NewGuid(),
                 CriadoEm = _dateTimeProvider.UtcNow,
                 NomeCategoria = NomeCategoria.Texto,
                 TipoCategoria = TipoCategoria.Valor?.ToString()?.ToLower() ?? "sem_categoria"

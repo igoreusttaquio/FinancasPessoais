@@ -2,17 +2,17 @@
 
 public class Transacao
 {
-    public int TransacaoId { get; set; }
-    public int ContaId { get; set; }
-    public int? CategoriaId { get; set; }
+    public Guid Id { get; set; }
+    public Guid ContaId { get; set; }
+    public Guid CategoriaId { get; set; }
     public decimal Valor { get; set; }
     public DateTime DataTransacao { get; set; }
-    public string Descricao { get; set; }
+    public string Descricao { get; set; } = string.Empty;
     public DateTime CriadoEm { get; set; }
 
     // Relacionamento com a conta
-    public Conta Conta { get; set; }
+    public Conta? Conta { get; set; }
 
     // Relacionamento com a categoria
-    public Categoria Categoria { get; set; }
+    public Categoria? Categoria { get; set; }
 }

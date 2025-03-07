@@ -1,4 +1,5 @@
 ﻿using Core.Dados;
+using Core.Entidades;
 using UI.Modais;
 
 namespace UI;
@@ -17,7 +18,7 @@ public partial class Contas : Form
 
         tabela1.DataSource = _bancoDadosContexto.Contas
             .ToList().Select(c => 
-            new { Nome = c.NomeConta, Tipo = c.TipoConta, Saldo = c.Saldo }).ToList();
+            new { Nome = c.NomeConta, Tipo = Conta.TiposContas.FirstOrDefault(tp => tp.Codigo == c.TipoConta).Descricao,  c.Saldo }).ToList();
     }
 
     private void botaoPrimario1_Click(object sender, EventArgs e)

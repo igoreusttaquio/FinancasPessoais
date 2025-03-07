@@ -19,7 +19,7 @@ namespace Core.Migrations
 
             modelBuilder.Entity("Core.Entidades.Categoria", b =>
                 {
-                    b.Property<Guid>("CategoriaId")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
@@ -34,19 +34,16 @@ namespace Core.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("CategoriaId");
+                    b.HasKey("Id");
 
                     b.ToTable("Categorias");
                 });
 
             modelBuilder.Entity("Core.Entidades.Conta", b =>
                 {
-                    b.Property<int>("ContaId")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("TEXT");
@@ -62,28 +59,22 @@ namespace Core.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("ContaId");
+                    b.HasKey("Id");
 
                     b.ToTable("Contas");
                 });
 
             modelBuilder.Entity("Core.Entidades.Transacao", b =>
                 {
-                    b.Property<int>("TransacaoId")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("CategoriaId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<Guid>("CategoriaId1")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("ContaId")
-                        .HasColumnType("INTEGER");
+                    b.Property<Guid>("CategoriaId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("ContaId")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("TEXT");
@@ -98,9 +89,9 @@ namespace Core.Migrations
                     b.Property<decimal>("Valor")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("TransacaoId");
+                    b.HasKey("Id");
 
-                    b.HasIndex("CategoriaId1");
+                    b.HasIndex("CategoriaId");
 
                     b.HasIndex("ContaId");
 
@@ -111,7 +102,7 @@ namespace Core.Migrations
                 {
                     b.HasOne("Core.Entidades.Categoria", "Categoria")
                         .WithMany("Transacoes")
-                        .HasForeignKey("CategoriaId1")
+                        .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

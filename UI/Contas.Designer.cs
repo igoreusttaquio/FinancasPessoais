@@ -38,7 +38,7 @@
             Nome = new DataGridViewTextBoxColumn();
             Tipo = new DataGridViewTextBoxColumn();
             Saldo = new DataGridViewTextBoxColumn();
-            Acoes = new DataGridViewButtonColumn();
+            Acao = new DataGridViewImageColumn();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tabela1).BeginInit();
@@ -123,7 +123,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             tabela1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             tabela1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tabela1.Columns.AddRange(new DataGridViewColumn[] { Nome, Tipo, Saldo, Acoes });
+            tabela1.Columns.AddRange(new DataGridViewColumn[] { Nome, Tipo, Saldo, Acao });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(31, 41, 55);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -162,13 +162,14 @@
             Saldo.Name = "Saldo";
             Saldo.ReadOnly = true;
             // 
-            // Acoes
+            // Acao
             // 
-            Acoes.HeaderText = "Ações";
-            Acoes.Name = "Acoes";
-            Acoes.ReadOnly = true;
-            Acoes.Resizable = DataGridViewTriState.True;
-            Acoes.SortMode = DataGridViewColumnSortMode.Automatic;
+            Acao.HeaderText = "Ação";
+            Acao.Image = Properties.Resources.lixeira;
+            Acao.Name = "Acao";
+            Acao.ReadOnly = true;
+            Acao.Resizable = DataGridViewTriState.True;
+            Acao.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // Contas
             // 
@@ -190,11 +191,11 @@
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private Componentes.Tabela tabela1;
+        private Label LabelContas;
+        private Componentes.BotaoPrimario botaoPrimario1;
         private DataGridViewTextBoxColumn Nome;
         private DataGridViewTextBoxColumn Tipo;
         private DataGridViewTextBoxColumn Saldo;
-        private DataGridViewButtonColumn Acoes;
-        private Label LabelContas;
-        private Componentes.BotaoPrimario botaoPrimario1;
+        private DataGridViewImageColumn Acao;
     }
 }

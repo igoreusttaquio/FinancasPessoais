@@ -37,9 +37,9 @@ namespace EmbeddedForms
             LabelAtividadesRecentes = new Label();
             LabelTitulo = new Label();
             LayoutCards = new TableLayoutPanel();
-            card1 = new Card();
-            card2 = new Card();
-            card3 = new Card();
+            CardSaldoTotal = new Card();
+            CardTotalTransacoes = new Card();
+            CardTotalContas = new Card();
             tableLayoutPanel4 = new TableLayoutPanel();
             BtnTransacoes = new Button();
             BtnGerenciarContas = new Button();
@@ -119,9 +119,9 @@ namespace EmbeddedForms
             LayoutCards.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             LayoutCards.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             LayoutCards.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            LayoutCards.Controls.Add(card1, 2, 0);
-            LayoutCards.Controls.Add(card2, 1, 0);
-            LayoutCards.Controls.Add(card3, 0, 0);
+            LayoutCards.Controls.Add(CardSaldoTotal, 2, 0);
+            LayoutCards.Controls.Add(CardTotalTransacoes, 1, 0);
+            LayoutCards.Controls.Add(CardTotalContas, 0, 0);
             LayoutCards.Dock = DockStyle.Fill;
             LayoutCards.Location = new Point(3, 62);
             LayoutCards.Name = "LayoutCards";
@@ -130,35 +130,35 @@ namespace EmbeddedForms
             LayoutCards.Size = new Size(794, 86);
             LayoutCards.TabIndex = 1;
             // 
-            // card1
+            // CardSaldoTotal
             // 
-            card1.DetralheCard = "R$ 1.500,00";
-            card1.Dock = DockStyle.Fill;
-            card1.Location = new Point(531, 3);
-            card1.Name = "card1";
-            card1.Size = new Size(260, 80);
-            card1.TabIndex = 2;
-            card1.TituloCard = "Dashboard";
+            CardSaldoTotal.DetralheCard = "R$ 1.500,00";
+            CardSaldoTotal.Dock = DockStyle.Fill;
+            CardSaldoTotal.Location = new Point(531, 3);
+            CardSaldoTotal.Name = "CardSaldoTotal";
+            CardSaldoTotal.Size = new Size(260, 80);
+            CardSaldoTotal.TabIndex = 2;
+            CardSaldoTotal.TituloCard = "Total em Despesas";
             // 
-            // card2
+            // CardTotalTransacoes
             // 
-            card2.DetralheCard = "15 Transações";
-            card2.Dock = DockStyle.Fill;
-            card2.Location = new Point(267, 3);
-            card2.Name = "card2";
-            card2.Size = new Size(258, 80);
-            card2.TabIndex = 3;
-            card2.TituloCard = "Total de Transações";
+            CardTotalTransacoes.DetralheCard = "15 Transações";
+            CardTotalTransacoes.Dock = DockStyle.Fill;
+            CardTotalTransacoes.Location = new Point(267, 3);
+            CardTotalTransacoes.Name = "CardTotalTransacoes";
+            CardTotalTransacoes.Size = new Size(258, 80);
+            CardTotalTransacoes.TabIndex = 3;
+            CardTotalTransacoes.TituloCard = "Total de Transações";
             // 
-            // card3
+            // CardTotalContas
             // 
-            card3.DetralheCard = "R$ 4.500,00";
-            card3.Dock = DockStyle.Fill;
-            card3.Location = new Point(3, 3);
-            card3.Name = "card3";
-            card3.Size = new Size(258, 80);
-            card3.TabIndex = 4;
-            card3.TituloCard = "Total em contas";
+            CardTotalContas.DetralheCard = "R$ 4.500,00";
+            CardTotalContas.Dock = DockStyle.Fill;
+            CardTotalContas.Location = new Point(3, 3);
+            CardTotalContas.Name = "CardTotalContas";
+            CardTotalContas.Size = new Size(258, 80);
+            CardTotalContas.TabIndex = 4;
+            CardTotalContas.TituloCard = "Total em contas";
             // 
             // tableLayoutPanel4
             // 
@@ -306,9 +306,9 @@ namespace EmbeddedForms
         private TableLayoutPanel tableLayoutPanel4;
         private Button BtnTransacoes;
         private Button BtnGerenciarContas;
-        private UI.Componentes.Card card1;
-        private UI.Componentes.Card card2;
-        private UI.Componentes.Card card3;
+        private UI.Componentes.Card CardSaldoTotal;
+        private UI.Componentes.Card CardTotalTransacoes;
+        private UI.Componentes.Card CardTotalContas;
         private Tabela TabelaAtividadesRecentes;
         private DataGridViewTextBoxColumn Data;
         private DataGridViewTextBoxColumn Conta;
