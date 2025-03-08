@@ -1,5 +1,4 @@
 ﻿using Core.Dados;
-using Core.Entidades;
 using UI.Services;
 
 namespace UI.Modais
@@ -14,15 +13,10 @@ namespace UI.Modais
             )
         {
             InitializeComponent();
-            AdicionarCategorias();
             _bancoDadosContexto = bancoDadosContexto;
             _dateTimeProvider = dateTimeProvider;
         }
 
-        private void AdicionarCategorias()
-        {
-            TipoCategoria.DefinirValores("Receita", "Despesa");
-        }
 
         private void botaoPrimario1_Click(object sender, EventArgs e)
         {
@@ -31,7 +25,7 @@ namespace UI.Modais
                 Id = Guid.NewGuid(),
                 CriadoEm = _dateTimeProvider.UtcNow,
                 NomeCategoria = NomeCategoria.Texto,
-                TipoCategoria = TipoCategoria.Valor?.ToString()?.ToLower() ?? "sem_categoria"
+                Orcamento = decimal.Parse(Orcamento.Texto)
             };
 
             _bancoDadosContexto.Categorias.Add(categoria);

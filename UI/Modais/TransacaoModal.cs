@@ -43,16 +43,16 @@ namespace UI.Modais
                 CriadoEm = data,
                 DataTransacao = data,
                 Descricao = Descricao.Texto,
+                Receita = TipoTransacao.PrimeiraOpcaoMarcada
             };
 
             var conta = _bancoDados.Contas.First(c => c.Id == transacao.Conta.Id);
 
-            if (transacao.Categoria?.TipoCategoria.ToLower() == "receita")
+            if (transacao.Receita)
             {
                 conta.Depositar(transacao.Valor);
             }
-
-            if (transacao.Categoria?.TipoCategoria.ToLower() == "despesa")
+            else
             {
                 conta.Sacar(transacao.Valor);
             }

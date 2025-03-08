@@ -29,10 +29,10 @@ partial class ContaModal
     private void InitializeComponent()
     {
         tableLayoutPanel1 = new TableLayoutPanel();
-        Saldo = new UI.Componentes.InputTexto();
-        NomeConta = new UI.Componentes.InputTexto();
-        ComboTipoConta = new UI.Componentes.InputCombo();
-        botaoPrimario1 = new UI.Componentes.BotaoPrimario();
+        Saldo = new Componentes.InputTexto();
+        NomeConta = new Componentes.InputTexto();
+        ComboTipoConta = new Componentes.InputCombo();
+        BotaoSalvar = new Componentes.BotaoPrimario();
         tableLayoutPanel1.SuspendLayout();
         SuspendLayout();
         // 
@@ -43,7 +43,7 @@ partial class ContaModal
         tableLayoutPanel1.Controls.Add(Saldo, 0, 2);
         tableLayoutPanel1.Controls.Add(NomeConta, 0, 0);
         tableLayoutPanel1.Controls.Add(ComboTipoConta, 0, 1);
-        tableLayoutPanel1.Controls.Add(botaoPrimario1, 0, 3);
+        tableLayoutPanel1.Controls.Add(BotaoSalvar, 0, 3);
         tableLayoutPanel1.Dock = DockStyle.Fill;
         tableLayoutPanel1.Location = new Point(10, 10);
         tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -85,21 +85,21 @@ partial class ContaModal
         ComboTipoConta.TabIndex = 3;
         ComboTipoConta.Valor = null;
         // 
-        // botaoPrimario1
+        // BotaoSalvar
         // 
-        botaoPrimario1.Anchor = AnchorStyles.Right;
-        botaoPrimario1.BackColor = Color.FromArgb(100, 111, 229);
-        botaoPrimario1.FlatAppearance.BorderSize = 0;
-        botaoPrimario1.FlatStyle = FlatStyle.Flat;
-        botaoPrimario1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-        botaoPrimario1.ForeColor = Color.FromArgb(5, 6, 63);
-        botaoPrimario1.Location = new Point(553, 165);
-        botaoPrimario1.Name = "botaoPrimario1";
-        botaoPrimario1.Size = new Size(116, 34);
-        botaoPrimario1.TabIndex = 1;
-        botaoPrimario1.Text = "Adicionar Conta";
-        botaoPrimario1.UseVisualStyleBackColor = false;
-        botaoPrimario1.Click += botaoPrimario1_Click;
+        BotaoSalvar.Anchor = AnchorStyles.Right;
+        BotaoSalvar.BackColor = Color.FromArgb(100, 111, 229);
+        BotaoSalvar.FlatAppearance.BorderSize = 0;
+        BotaoSalvar.FlatStyle = FlatStyle.Flat;
+        BotaoSalvar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        BotaoSalvar.ForeColor = Color.FromArgb(5, 6, 63);
+        BotaoSalvar.Location = new Point(553, 165);
+        BotaoSalvar.Name = "BotaoSalvar";
+        BotaoSalvar.Size = new Size(116, 34);
+        BotaoSalvar.TabIndex = 1;
+        BotaoSalvar.Text = "Adicionar Conta";
+        BotaoSalvar.UseVisualStyleBackColor = false;
+        BotaoSalvar.Click += BotaoSalvar_Click;
         // 
         // ContaModal
         // 
@@ -122,5 +122,5 @@ partial class ContaModal
     private Componentes.InputTexto Saldo;
     private Componentes.InputTexto NomeConta;
     private Componentes.InputCombo ComboTipoConta;
-    private Componentes.BotaoPrimario botaoPrimario1;
+    private Componentes.BotaoPrimario BotaoSalvar;
 }

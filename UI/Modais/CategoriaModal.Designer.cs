@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            TipoCategoria = new UI.Componentes.InputCombo();
-            NomeCategoria = new UI.Componentes.InputTexto();
-            BotaoAdicionarCategoria = new UI.Componentes.BotaoPrimario();
+            Orcamento = new Componentes.InputTexto();
+            NomeCategoria = new Componentes.InputTexto();
+            BotaoAdicionarCategoria = new Componentes.BotaoPrimario();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -39,7 +39,7 @@
             // 
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(TipoCategoria, 0, 1);
+            tableLayoutPanel1.Controls.Add(Orcamento, 0, 1);
             tableLayoutPanel1.Controls.Add(NomeCategoria, 0, 0);
             tableLayoutPanel1.Controls.Add(BotaoAdicionarCategoria, 0, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
@@ -52,14 +52,14 @@
             tableLayoutPanel1.Size = new Size(476, 174);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // TipoCategoria
+            // Orcamento
             // 
-            TipoCategoria.Label = "Tipo";
-            TipoCategoria.Location = new Point(3, 64);
-            TipoCategoria.Name = "TipoCategoria";
-            TipoCategoria.Size = new Size(470, 48);
-            TipoCategoria.TabIndex = 0;
-            TipoCategoria.Valor = null;
+            Orcamento.Label = "Orçamento(mês)";
+            Orcamento.Location = new Point(3, 64);
+            Orcamento.Name = "Orcamento";
+            Orcamento.Size = new Size(470, 48);
+            Orcamento.TabIndex = 2;
+            Orcamento.Texto = "";
             // 
             // NomeCategoria
             // 
@@ -104,8 +104,8 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private Componentes.InputCombo TipoCategoria;
         private Componentes.InputTexto NomeCategoria;
         private Componentes.BotaoPrimario BotaoAdicionarCategoria;
+        private Componentes.InputTexto Orcamento;
     }
 }

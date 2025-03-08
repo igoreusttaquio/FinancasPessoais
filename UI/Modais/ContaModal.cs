@@ -24,7 +24,7 @@ public partial class ContaModal : Form
         ComboTipoConta.DefinirValores(Conta.TiposContas);
     }
 
-    private void botaoPrimario1_Click(object sender, EventArgs e)
+    private void BotaoSalvar_Click(object sender, EventArgs e)
     {
         var conta = new Conta
         {
