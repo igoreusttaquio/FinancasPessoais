@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Core.Migrations
 {
     [DbContext(typeof(BancoDadosContexto))]
-    [Migration("20250306225640_AlterandoIdParaGuid")]
-    partial class AlterandoIdParaGuid
+    [Migration("20250308025744_Inicial")]
+    partial class Inicial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,8 +33,7 @@ namespace Core.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("TipoCategoria")
-                        .IsRequired()
+                    b.Property<decimal>("Orcamento")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -88,6 +87,9 @@ namespace Core.Migrations
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("Receita")
+                        .HasColumnType("INTEGER");
 
                     b.Property<decimal>("Valor")
                         .HasColumnType("TEXT");

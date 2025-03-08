@@ -30,8 +30,7 @@ namespace Core.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("TipoCategoria")
-                        .IsRequired()
+                    b.Property<decimal>("Orcamento")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -85,6 +84,9 @@ namespace Core.Migrations
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("Receita")
+                        .HasColumnType("INTEGER");
 
                     b.Property<decimal>("Valor")
                         .HasColumnType("TEXT");

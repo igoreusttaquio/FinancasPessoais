@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Core.Migrations
 {
     /// <inheritdoc />
-    public partial class AlterandoIdParaGuid : Migration
+    public partial class Inicial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,7 @@ namespace Core.Migrations
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     NomeCategoria = table.Column<string>(type: "TEXT", nullable: false),
-                    TipoCategoria = table.Column<string>(type: "TEXT", nullable: false),
+                    Orcamento = table.Column<decimal>(type: "TEXT", nullable: false),
                     CriadoEm = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
@@ -49,6 +49,7 @@ namespace Core.Migrations
                     CategoriaId = table.Column<Guid>(type: "TEXT", nullable: false),
                     Valor = table.Column<decimal>(type: "TEXT", nullable: false),
                     DataTransacao = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Receita = table.Column<bool>(type: "INTEGER", nullable: false),
                     Descricao = table.Column<string>(type: "TEXT", nullable: false),
                     CriadoEm = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
