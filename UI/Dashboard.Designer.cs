@@ -139,6 +139,7 @@ namespace EmbeddedForms
             CardSaldoTotal.Size = new Size(260, 80);
             CardSaldoTotal.TabIndex = 2;
             CardSaldoTotal.TituloCard = "Total em Despesas";
+            CardSaldoTotal.Load += CardSaldoTotal_Load;
             // 
             // CardTotalTransacoes
             // 

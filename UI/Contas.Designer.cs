@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             LabelContas = new Label();
-            botaoPrimario1 = new Componentes.BotaoPrimario();
-            tabela1 = new Componentes.Tabela();
+            BotaoAdicionarConta = new Componentes.BotaoPrimario();
+            TabelaContas = new Componentes.Tabela();
             Nome = new DataGridViewTextBoxColumn();
             Tipo = new DataGridViewTextBoxColumn();
             Saldo = new DataGridViewTextBoxColumn();
             Acao = new DataGridViewImageColumn();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)tabela1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TabelaContas).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -50,7 +50,7 @@
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
-            tableLayoutPanel1.Controls.Add(tabela1, 0, 1);
+            tableLayoutPanel1.Controls.Add(TabelaContas, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -66,7 +66,7 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 78.33753F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 21.662468F));
             tableLayoutPanel2.Controls.Add(LabelContas, 0, 0);
-            tableLayoutPanel2.Controls.Add(botaoPrimario1, 1, 0);
+            tableLayoutPanel2.Controls.Add(BotaoAdicionarConta, 1, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(3, 3);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -88,58 +88,58 @@
             LabelContas.Text = "Minhas Contas";
             LabelContas.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // botaoPrimario1
+            // BotaoAdicionarConta
             // 
-            botaoPrimario1.Anchor = AnchorStyles.Right;
-            botaoPrimario1.BackColor = Color.FromArgb(100, 111, 229);
-            botaoPrimario1.FlatAppearance.BorderSize = 0;
-            botaoPrimario1.FlatStyle = FlatStyle.Flat;
-            botaoPrimario1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            botaoPrimario1.ForeColor = Color.FromArgb(5, 6, 63);
-            botaoPrimario1.Location = new Point(629, 7);
-            botaoPrimario1.Name = "botaoPrimario1";
-            botaoPrimario1.Size = new Size(162, 34);
-            botaoPrimario1.TabIndex = 1;
-            botaoPrimario1.Text = "Adicionar nova conta";
-            botaoPrimario1.UseVisualStyleBackColor = false;
-            botaoPrimario1.Click += botaoPrimario1_Click;
+            BotaoAdicionarConta.Anchor = AnchorStyles.Right;
+            BotaoAdicionarConta.BackColor = Color.FromArgb(100, 111, 229);
+            BotaoAdicionarConta.FlatAppearance.BorderSize = 0;
+            BotaoAdicionarConta.FlatStyle = FlatStyle.Flat;
+            BotaoAdicionarConta.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            BotaoAdicionarConta.ForeColor = Color.FromArgb(5, 6, 63);
+            BotaoAdicionarConta.Location = new Point(629, 7);
+            BotaoAdicionarConta.Name = "BotaoAdicionarConta";
+            BotaoAdicionarConta.Size = new Size(162, 34);
+            BotaoAdicionarConta.TabIndex = 1;
+            BotaoAdicionarConta.Text = "Adicionar nova conta";
+            BotaoAdicionarConta.UseVisualStyleBackColor = false;
+            BotaoAdicionarConta.Click += BotaoAdicionarConta_Click;
             // 
-            // tabela1
+            // TabelaContas
             // 
-            tabela1.AllowUserToAddRows = false;
-            tabela1.AllowUserToDeleteRows = false;
-            tabela1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            tabela1.BackgroundColor = Color.FromArgb(31, 41, 55);
-            tabela1.BorderStyle = BorderStyle.None;
-            tabela1.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            tabela1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(31, 41, 55);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = SystemColors.Control;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(55, 65, 81);
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.Control;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            tabela1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            tabela1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tabela1.Columns.AddRange(new DataGridViewColumn[] { Nome, Tipo, Saldo, Acao });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(31, 41, 55);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            tabela1.DefaultCellStyle = dataGridViewCellStyle2;
-            tabela1.Dock = DockStyle.Fill;
-            tabela1.EnableHeadersVisualStyles = false;
-            tabela1.Location = new Point(3, 57);
-            tabela1.Name = "tabela1";
-            tabela1.ReadOnly = true;
-            tabela1.RowHeadersVisible = false;
-            tabela1.Size = new Size(794, 390);
-            tabela1.TabIndex = 1;
+            TabelaContas.AllowUserToAddRows = false;
+            TabelaContas.AllowUserToDeleteRows = false;
+            TabelaContas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            TabelaContas.BackgroundColor = Color.FromArgb(31, 41, 55);
+            TabelaContas.BorderStyle = BorderStyle.None;
+            TabelaContas.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            TabelaContas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(31, 41, 55);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = SystemColors.Control;
+            dataGridViewCellStyle3.Padding = new Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(55, 65, 81);
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.Control;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            TabelaContas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            TabelaContas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            TabelaContas.Columns.AddRange(new DataGridViewColumn[] { Nome, Tipo, Saldo, Acao });
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(31, 41, 55);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            TabelaContas.DefaultCellStyle = dataGridViewCellStyle4;
+            TabelaContas.Dock = DockStyle.Fill;
+            TabelaContas.EnableHeadersVisualStyles = false;
+            TabelaContas.Location = new Point(3, 57);
+            TabelaContas.Name = "TabelaContas";
+            TabelaContas.ReadOnly = true;
+            TabelaContas.RowHeadersVisible = false;
+            TabelaContas.Size = new Size(794, 390);
+            TabelaContas.TabIndex = 1;
             // 
             // Nome
             // 
@@ -182,7 +182,7 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)tabela1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TabelaContas).EndInit();
             ResumeLayout(false);
         }
 
@@ -190,9 +190,9 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
-        private Componentes.Tabela tabela1;
+        private Componentes.Tabela TabelaContas;
         private Label LabelContas;
-        private Componentes.BotaoPrimario botaoPrimario1;
+        private Componentes.BotaoPrimario BotaoAdicionarConta;
         private DataGridViewTextBoxColumn Nome;
         private DataGridViewTextBoxColumn Tipo;
         private DataGridViewTextBoxColumn Saldo;

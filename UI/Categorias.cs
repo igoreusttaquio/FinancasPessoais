@@ -1,5 +1,7 @@
-﻿using Core.Dados;
+﻿using System.Globalization;
+using Core.Dados;
 using UI.Modais;
+using UI.Utils;
 
 namespace UI
 {
@@ -26,21 +28,10 @@ namespace UI
 
         private void PreencherTabelaCategorias()
         {
-            var categorias = _bancoDadosContexto.Categorias.ToList()?.Select(c => new { Nome = c.NomeCategoria, Tipo = Capitalize(c.TipoCategoria) });
+            var categorias = _bancoDadosContexto.Categorias.ToList()?.Select(c => new { Nome = c.NomeCategoria, Orcamento = c.Orcamento.FormatarParaMoeda() });
             if (categorias is null) return;
 
             tabela1.DataSource = categorias.ToList();
-        }
-
-        public static string Capitalize(string input)
-        {
-            if (string.IsNullOrEmpty(input))
-            {
-                return input;
-            }
-
-            // Capitaliza a primeira letra e mantém o resto da string inalterado
-            return input.Substring(0, 1).ToUpper() + input.Substring(1).ToLower();
         }
 
     }

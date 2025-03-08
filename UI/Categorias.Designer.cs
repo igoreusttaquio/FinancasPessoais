@@ -36,7 +36,7 @@
             botaoPrimario1 = new Componentes.BotaoPrimario();
             tabela1 = new Componentes.Tabela();
             Nome = new DataGridViewTextBoxColumn();
-            Tipo = new DataGridViewTextBoxColumn();
+            Orcamento = new DataGridViewTextBoxColumn();
             Acoes = new DataGridViewImageColumn();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -123,7 +123,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             tabela1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             tabela1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tabela1.Columns.AddRange(new DataGridViewColumn[] { Nome, Tipo, Acoes });
+            tabela1.Columns.AddRange(new DataGridViewColumn[] { Nome, Orcamento, Acoes });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(31, 41, 55);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -148,12 +148,12 @@
             Nome.Name = "Nome";
             Nome.ReadOnly = true;
             // 
-            // Tipo
+            // Orcamento
             // 
-            Tipo.DataPropertyName = "Tipo";
-            Tipo.HeaderText = "Tipo";
-            Tipo.Name = "Tipo";
-            Tipo.ReadOnly = true;
+            Orcamento.DataPropertyName = "Orcamento";
+            Orcamento.HeaderText = "Orçamento(mês)";
+            Orcamento.Name = "Orcamento";
+            Orcamento.ReadOnly = true;
             // 
             // Acoes
             // 
@@ -187,7 +187,7 @@
         private Componentes.BotaoPrimario botaoPrimario1;
         private Componentes.Tabela tabela1;
         private DataGridViewTextBoxColumn Nome;
-        private DataGridViewTextBoxColumn Tipo;
+        private DataGridViewTextBoxColumn Orcamento;
         private DataGridViewImageColumn Acoes;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Core.Dados;
 using Microsoft.EntityFrameworkCore;
 using UI.Modais;
+using UI.Utils;
 
 namespace UI
 {
@@ -34,7 +35,7 @@ namespace UI
                     Data = t.DataTransacao,
                     Conta = t.Conta?.NomeConta,
                     Categoria = t.Categoria?.NomeCategoria,
-                    t.Valor,
+                    Valor = t.Receita ? t.Valor.FormatarParaMoeda() : $"-{t.Valor.FormatarParaMoeda()}",
                     t.Descricao
                 }).ToList();
         }
