@@ -25,10 +25,16 @@ namespace UI
             PreencerTabelaTransacoes();
         }
 
-        private async void PreencerTabelaTransacoes()
+        private async void PreencerTabelaTransacoes(DateTime? data = null)
         {
             TabelaTransacoes.DataSource = null;
             var transacoes = await _bancoDadosContexto.Transacoes.ToListAsync();
+            if (data != null)
+            {
+                transacoes = transacoes.Where(t => t.DataTransacao.Month == data.Value.Month
+                    && t.DataTransacao.Year == data.Value.Year).ToList();
+            }
+
             TabelaTransacoes.DataSource = transacoes
                 .ConvertAll(t => new
                 {
@@ -38,6 +44,11 @@ namespace UI
                     Valor = t.Receita ? t.Valor.FormatarParaMoeda() : $"-{t.Valor.FormatarParaMoeda()}",
                     t.Descricao
                 }).ToList();
+        }
+
+        private void DataFiltro_ValueChanged(object sender, EventArgs e)
+        {
+            PreencerTabelaTransacoes(DataFiltro.Value);
         }
     }
 }

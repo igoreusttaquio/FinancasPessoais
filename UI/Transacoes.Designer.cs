@@ -34,6 +34,7 @@
             tableLayoutPanel2 = new TableLayoutPanel();
             LabelHistoricoTransacoes = new Label();
             BtnAdicionarTransacao = new Componentes.BotaoPrimario();
+            DataFiltro = new DateTimePicker();
             TabelaTransacoes = new Componentes.Tabela();
             Data = new DataGridViewTextBoxColumn();
             Conta = new DataGridViewTextBoxColumn();
@@ -63,11 +64,13 @@
             // 
             // tableLayoutPanel2
             // 
-            tableLayoutPanel2.ColumnCount = 2;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 81.3602F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 18.6398F));
+            tableLayoutPanel2.ColumnCount = 3;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 87.3397446F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.6602564F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 169F));
             tableLayoutPanel2.Controls.Add(LabelHistoricoTransacoes, 0, 0);
-            tableLayoutPanel2.Controls.Add(BtnAdicionarTransacao, 1, 0);
+            tableLayoutPanel2.Controls.Add(BtnAdicionarTransacao, 2, 0);
+            tableLayoutPanel2.Controls.Add(DataFiltro, 1, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(3, 3);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -84,7 +87,7 @@
             LabelHistoricoTransacoes.ForeColor = SystemColors.ButtonHighlight;
             LabelHistoricoTransacoes.Location = new Point(3, 10);
             LabelHistoricoTransacoes.Name = "LabelHistoricoTransacoes";
-            LabelHistoricoTransacoes.Size = new Size(639, 32);
+            LabelHistoricoTransacoes.Size = new Size(539, 32);
             LabelHistoricoTransacoes.TabIndex = 3;
             LabelHistoricoTransacoes.Text = "Histórico de Transações";
             LabelHistoricoTransacoes.TextAlign = ContentAlignment.MiddleLeft;
@@ -97,13 +100,26 @@
             BtnAdicionarTransacao.FlatStyle = FlatStyle.Flat;
             BtnAdicionarTransacao.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             BtnAdicionarTransacao.ForeColor = Color.FromArgb(5, 6, 63);
-            BtnAdicionarTransacao.Location = new Point(648, 11);
+            BtnAdicionarTransacao.Location = new Point(627, 11);
             BtnAdicionarTransacao.Name = "BtnAdicionarTransacao";
-            BtnAdicionarTransacao.Size = new Size(143, 30);
+            BtnAdicionarTransacao.Size = new Size(164, 30);
             BtnAdicionarTransacao.TabIndex = 1;
             BtnAdicionarTransacao.Text = "Adicionar Transação";
             BtnAdicionarTransacao.UseVisualStyleBackColor = false;
             BtnAdicionarTransacao.Click += BtnAdicionarTransacao_Click;
+            // 
+            // DataFiltro
+            // 
+            DataFiltro.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            DataFiltro.Cursor = Cursors.Hand;
+            DataFiltro.CustomFormat = "MM/yyyy";
+            DataFiltro.Format = DateTimePickerFormat.Custom;
+            DataFiltro.Location = new Point(548, 14);
+            DataFiltro.Name = "DataFiltro";
+            DataFiltro.ShowUpDown = true;
+            DataFiltro.Size = new Size(73, 23);
+            DataFiltro.TabIndex = 4;
+            DataFiltro.ValueChanged += DataFiltro_ValueChanged;
             // 
             // TabelaTransacoes
             // 
@@ -204,5 +220,6 @@
         private DataGridViewTextBoxColumn Categoria;
         private DataGridViewTextBoxColumn Valor;
         private DataGridViewTextBoxColumn Descricao;
+        private DateTimePicker DataFiltro;
     }
 }
