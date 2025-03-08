@@ -5,7 +5,7 @@ public class Categoria
     public Guid Id { get; set; }
     //public Guid UsuarioId { get; set; }
     public string NomeCategoria { get; set; } = string.Empty;
-    public string TipoCategoria { get; set; } = string.Empty;// "receita" ou "despesa"
+    public decimal Orcamento { get; set; }
     public DateTime CriadoEm { get; set; }
 
     // Relacionamento com o usuário

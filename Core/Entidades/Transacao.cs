@@ -7,6 +7,7 @@ public class Transacao
     public Guid CategoriaId { get; set; }
     public decimal Valor { get; set; }
     public DateTime DataTransacao { get; set; }
+    public bool Receita { get; set; }
     public string Descricao { get; set; } = string.Empty;
     public DateTime CriadoEm { get; set; }
 
@@ -15,4 +16,6 @@ public class Transacao
 
     // Relacionamento com a categoria
     public Categoria? Categoria { get; set; }
+
+    public string TipoTransacao() => Receita ? "Receita" : "Despesa";
 }

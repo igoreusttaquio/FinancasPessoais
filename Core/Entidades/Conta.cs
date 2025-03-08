@@ -40,6 +40,13 @@ public class Conta
              new TipoConta("internacional", "Conta Internacional")
         ];
 
+    public static string ObterDescricaoTipoConta(string codigo)
+    {
+        return TiposContas
+                    .FirstOrDefault(tp => tp.Codigo == codigo)?.Descricao 
+                    ?? string.Empty;
+    }
+
     public override string ToString()
     {
         return NomeConta;
