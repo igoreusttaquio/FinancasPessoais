@@ -191,6 +191,7 @@ namespace EmbeddedForms
             BtnTransacoes.TabIndex = 2;
             BtnTransacoes.Text = "Ver Transações";
             BtnTransacoes.UseVisualStyleBackColor = false;
+            BtnTransacoes.Click += BtnTransacoes_Click;
             // 
             // BtnGerenciarContas
             // 
@@ -207,6 +208,7 @@ namespace EmbeddedForms
             BtnGerenciarContas.TabIndex = 1;
             BtnGerenciarContas.Text = "Gerenciar Contas";
             BtnGerenciarContas.UseVisualStyleBackColor = false;
+            BtnGerenciarContas.Click += BtnGerenciarContas_Click;
             // 
             // TabelaAtividadesRecentes
             // 

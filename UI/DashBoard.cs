@@ -1,6 +1,7 @@
-﻿using System.Globalization;
-using Core.Dados;
+﻿using Core.Dados;
 using Microsoft.EntityFrameworkCore;
+using UI;
+using UI.Services;
 using UI.Utils;
 using static UI.Utils.TabelaExtencoes;
 
@@ -9,12 +10,15 @@ namespace EmbeddedForms
     public partial class DashBoard : Form
     {
         BancoDadosContexto _bancoDadosContexto { get; set; }
-        public DashBoard(BancoDadosContexto bancoDadosContexto)
+        readonly INavigationService _navigationService;
+        public DashBoard(
+            BancoDadosContexto bancoDadosContexto,
+            INavigationService navigationService)
         {
             InitializeComponent();
             TabelaAtividadesRecentes.DesabilitarGeracaoAutomaticaColunas();
             _bancoDadosContexto = bancoDadosContexto;
-
+            _navigationService = navigationService;
             AdicionarDadosFicticios();
             PreencherCards();
         }
@@ -55,6 +59,16 @@ namespace EmbeddedForms
         private void CardSaldoTotal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnGerenciarContas_Click(object sender, EventArgs e)
+        {
+            _navigationService.NavigateTo<Contas>();
+        }
+
+        private void BtnTransacoes_Click(object sender, EventArgs e)
+        {
+            _navigationService.NavigateTo<Transacoes>();
         }
     }
 }
