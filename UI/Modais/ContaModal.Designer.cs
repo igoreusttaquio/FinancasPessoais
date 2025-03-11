@@ -45,43 +45,49 @@ partial class ContaModal
         tableLayoutPanel1.Controls.Add(ComboTipoConta, 0, 1);
         tableLayoutPanel1.Controls.Add(BotaoSalvar, 0, 3);
         tableLayoutPanel1.Dock = DockStyle.Fill;
-        tableLayoutPanel1.Location = new Point(10, 10);
+        tableLayoutPanel1.Location = new Point(14, 17);
+        tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
         tableLayoutPanel1.Name = "tableLayoutPanel1";
         tableLayoutPanel1.RowCount = 4;
         tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
         tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
         tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
         tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-        tableLayoutPanel1.Size = new Size(672, 208);
+        tableLayoutPanel1.Size = new Size(961, 346);
         tableLayoutPanel1.TabIndex = 0;
         // 
         // Saldo
         // 
         Saldo.Dock = DockStyle.Fill;
         Saldo.Label = "Saldo";
-        Saldo.Location = new Point(3, 107);
+        Saldo.Location = new Point(6, 180);
+        Saldo.Margin = new Padding(6, 8, 6, 8);
         Saldo.Name = "Saldo";
-        Saldo.Size = new Size(666, 46);
+        Saldo.Size = new Size(949, 70);
         Saldo.TabIndex = 2;
         Saldo.Texto = "";
+        Saldo.TratarComoSenha = false;
         // 
         // NomeConta
         // 
         NomeConta.Dock = DockStyle.Fill;
         NomeConta.Label = "Nome";
-        NomeConta.Location = new Point(3, 3);
+        NomeConta.Location = new Point(6, 8);
+        NomeConta.Margin = new Padding(6, 8, 6, 8);
         NomeConta.Name = "NomeConta";
-        NomeConta.Size = new Size(666, 46);
+        NomeConta.Size = new Size(949, 70);
         NomeConta.TabIndex = 0;
         NomeConta.Texto = "";
+        NomeConta.TratarComoSenha = false;
         // 
         // ComboTipoConta
         // 
         ComboTipoConta.Dock = DockStyle.Fill;
         ComboTipoConta.Label = "Tipo";
-        ComboTipoConta.Location = new Point(3, 55);
+        ComboTipoConta.Location = new Point(6, 94);
+        ComboTipoConta.Margin = new Padding(6, 8, 6, 8);
         ComboTipoConta.Name = "ComboTipoConta";
-        ComboTipoConta.Size = new Size(666, 46);
+        ComboTipoConta.Size = new Size(949, 70);
         ComboTipoConta.TabIndex = 3;
         ComboTipoConta.Valor = null;
         // 
@@ -93,9 +99,10 @@ partial class ContaModal
         BotaoSalvar.FlatStyle = FlatStyle.Flat;
         BotaoSalvar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
         BotaoSalvar.ForeColor = Color.FromArgb(5, 6, 63);
-        BotaoSalvar.Location = new Point(553, 165);
+        BotaoSalvar.Location = new Point(791, 273);
+        BotaoSalvar.Margin = new Padding(4, 5, 4, 5);
         BotaoSalvar.Name = "BotaoSalvar";
-        BotaoSalvar.Size = new Size(116, 34);
+        BotaoSalvar.Size = new Size(166, 57);
         BotaoSalvar.TabIndex = 1;
         BotaoSalvar.Text = "Adicionar Conta";
         BotaoSalvar.UseVisualStyleBackColor = false;
@@ -103,13 +110,14 @@ partial class ContaModal
         // 
         // ContaModal
         // 
-        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleDimensions = new SizeF(10F, 25F);
         AutoScaleMode = AutoScaleMode.Font;
         BackColor = Color.FromArgb(31, 41, 55);
-        ClientSize = new Size(692, 228);
+        ClientSize = new Size(989, 380);
         Controls.Add(tableLayoutPanel1);
+        Margin = new Padding(4, 5, 4, 5);
         Name = "ContaModal";
-        Padding = new Padding(10);
+        Padding = new Padding(14, 17, 14, 17);
         StartPosition = FormStartPosition.CenterParent;
         Text = "Conta";
         tableLayoutPanel1.ResumeLayout(false);

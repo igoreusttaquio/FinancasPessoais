@@ -48,4 +48,11 @@ public class NavigationService : INavigationService
         form.Show();
         currentForm = form;
     }
+
+    public void Pop()
+    {
+        while (navigationStack.Count > 0) {
+            navigationStack.Pop();
+        }
+    }
 }

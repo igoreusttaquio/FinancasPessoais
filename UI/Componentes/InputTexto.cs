@@ -33,5 +33,41 @@ namespace UI.Componentes
             set => Titulo.Text = value;
         }
 
+        [Browsable(true)]  // Propriedade visível no PropertyGrid
+        [Category("Customizados")]
+        [Description("Define se o imput sera tratado como senha")]
+        public bool TratarComoSenha
+        {
+            get => Input.PasswordChar != '\0';
+            set
+            {
+                if (value)
+                {
+                    Input.PasswordChar = '*';
+                    TableLayoutPanelCorpo.ColumnStyles[0].SizeType = SizeType.Percent;
+                    TableLayoutPanelCorpo.ColumnStyles[1].SizeType = SizeType.Percent;
+
+                    TableLayoutPanelCorpo.ColumnStyles[0].Width = 90f;
+                    TableLayoutPanelCorpo.ColumnStyles[1].Width = 10f;
+                }
+                else
+                {
+                    TableLayoutPanelCorpo.ColumnStyles[0].SizeType = SizeType.Percent;
+                    TableLayoutPanelCorpo.ColumnStyles[1].SizeType = SizeType.Percent;
+
+                    TableLayoutPanelCorpo.ColumnStyles[0].Width = 100f;
+                    TableLayoutPanelCorpo.ColumnStyles[1].Width = 0f;
+                    Input.PasswordChar = '\0';
+                }
+            }
+        }
+
+        private void BotaoExibirSenha_Click(object sender, EventArgs e)
+        {
+            Input.PasswordChar = Input.PasswordChar == '\0' ? '*' : '\0';
+
+            BotaoExibirSenha.Image = Input.PasswordChar == '\0' ? Properties.Resources.ocultar : Properties.Resources.exibir;
+
+        }
     }
 }

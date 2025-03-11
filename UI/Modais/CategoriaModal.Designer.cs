@@ -43,32 +43,37 @@
             tableLayoutPanel1.Controls.Add(NomeCategoria, 0, 0);
             tableLayoutPanel1.Controls.Add(BotaoAdicionarCategoria, 0, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(10, 10);
+            tableLayoutPanel1.Location = new Point(14, 17);
+            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 35.25305F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 31.4136124F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Size = new Size(476, 174);
+            tableLayoutPanel1.Size = new Size(681, 289);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // Orcamento
             // 
             Orcamento.Label = "Orçamento(mês)";
-            Orcamento.Location = new Point(3, 64);
+            Orcamento.Location = new Point(6, 109);
+            Orcamento.Margin = new Padding(6, 8, 6, 8);
             Orcamento.Name = "Orcamento";
-            Orcamento.Size = new Size(470, 48);
+            Orcamento.Size = new Size(669, 74);
             Orcamento.TabIndex = 2;
             Orcamento.Texto = "";
+            Orcamento.TratarComoSenha = false;
             // 
             // NomeCategoria
             // 
             NomeCategoria.Label = "Nome";
-            NomeCategoria.Location = new Point(3, 3);
+            NomeCategoria.Location = new Point(6, 8);
+            NomeCategoria.Margin = new Padding(6, 8, 6, 8);
             NomeCategoria.Name = "NomeCategoria";
-            NomeCategoria.Size = new Size(470, 53);
+            NomeCategoria.Size = new Size(669, 85);
             NomeCategoria.TabIndex = 1;
             NomeCategoria.Texto = "";
+            NomeCategoria.TratarComoSenha = false;
             // 
             // BotaoAdicionarCategoria
             // 
@@ -78,9 +83,10 @@
             BotaoAdicionarCategoria.FlatStyle = FlatStyle.Flat;
             BotaoAdicionarCategoria.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             BotaoAdicionarCategoria.ForeColor = Color.FromArgb(5, 6, 63);
-            BotaoAdicionarCategoria.Location = new Point(339, 127);
+            BotaoAdicionarCategoria.Location = new Point(486, 211);
+            BotaoAdicionarCategoria.Margin = new Padding(4, 5, 4, 5);
             BotaoAdicionarCategoria.Name = "BotaoAdicionarCategoria";
-            BotaoAdicionarCategoria.Size = new Size(134, 34);
+            BotaoAdicionarCategoria.Size = new Size(191, 57);
             BotaoAdicionarCategoria.TabIndex = 1;
             BotaoAdicionarCategoria.Text = "Adicionar Categoria";
             BotaoAdicionarCategoria.UseVisualStyleBackColor = false;
@@ -88,13 +94,14 @@
             // 
             // CategoriaModal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(31, 41, 55);
-            ClientSize = new Size(496, 194);
+            ClientSize = new Size(709, 323);
             Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "CategoriaModal";
-            Padding = new Padding(10);
+            Padding = new Padding(14, 17, 14, 17);
             StartPosition = FormStartPosition.CenterParent;
             Text = "Categoria";
             tableLayoutPanel1.ResumeLayout(false);

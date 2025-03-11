@@ -6,5 +6,6 @@ public interface INavigationService
     void GoBack();
     bool CanGoBack { get; }
     void InitializeContainer(Control container);
+    void Pop();
 }
 

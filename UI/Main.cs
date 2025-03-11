@@ -18,6 +18,11 @@ namespace EmbeddedForms
                 Layout.Panel1.Hide();
                 navigationService.NavigateTo<Login>();
             }
+            else
+            {
+                Layout.Panel1.Show();
+                navigationService.NavigateTo<DashBoard>();
+            }
         }
 
         private void BtnDashboard_Click(object sender, EventArgs e)
