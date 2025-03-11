@@ -13,6 +13,11 @@ namespace EmbeddedForms
             AjustarAparenciaBotoes();
 
             navigationService.InitializeContainer(Layout.Panel2);
+            if (Program.Logado is false)
+            {
+                Layout.Panel1.Hide();
+                navigationService.NavigateTo<Login>();
+            }
         }
 
         private void BtnDashboard_Click(object sender, EventArgs e)
@@ -32,7 +37,7 @@ namespace EmbeddedForms
 
         private void AjustarAparenciaBotoes()
         {
-            foreach (var botao in Sidebar.Controls.OfType<Button>())
+            foreach (var botao in NavBar.Controls.OfType<Button>())
             {
                 botao.Cursor = Cursors.Hand;
             }

@@ -29,6 +29,8 @@ internal static class Program
     static void ConfigureFormularios(IServiceCollection servicos)
     {
         servicos.AddTransient<Main>();
+        servicos.AddTransient<Login>();
+        servicos.AddTransient<Registrar>();
         servicos.AddTransient<DashBoard>();
         servicos.AddTransient<Contas>();
         servicos.AddTransient<Transacoes>();
@@ -44,4 +46,6 @@ internal static class Program
         servicos.AddTransient<TransacaoModal>();
         servicos.AddTransient<ContaModal>();
     }
+
+    internal static bool Logado {  get; set; } = false;
 }
