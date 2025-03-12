@@ -30,9 +30,10 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             LabelHistoricoTransacoes = new Label();
-            inputTexto1 = new Componentes.InputTexto();
-            inputTexto3 = new Componentes.InputTexto();
+            NomeUsuario = new Componentes.InputTexto();
+            Senha = new Componentes.InputTexto();
             BotaoLogin = new Componentes.BotaoPrimario();
+            LinkCadastro = new LinkLabel();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -42,17 +43,19 @@
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(LabelHistoricoTransacoes, 0, 0);
-            tableLayoutPanel1.Controls.Add(inputTexto1, 0, 1);
-            tableLayoutPanel1.Controls.Add(inputTexto3, 0, 2);
+            tableLayoutPanel1.Controls.Add(NomeUsuario, 0, 1);
+            tableLayoutPanel1.Controls.Add(Senha, 0, 2);
             tableLayoutPanel1.Controls.Add(BotaoLogin, 0, 3);
+            tableLayoutPanel1.Controls.Add(LinkCadastro, 0, 4);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 4;
+            tableLayoutPanel1.RowCount = 5;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tableLayoutPanel1.Size = new Size(800, 450);
             tableLayoutPanel1.TabIndex = 0;
             // 
@@ -62,36 +65,36 @@
             LabelHistoricoTransacoes.AutoSize = true;
             LabelHistoricoTransacoes.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             LabelHistoricoTransacoes.ForeColor = SystemColors.ButtonHighlight;
-            LabelHistoricoTransacoes.Location = new Point(3, 40);
+            LabelHistoricoTransacoes.Location = new Point(3, 36);
             LabelHistoricoTransacoes.Name = "LabelHistoricoTransacoes";
             LabelHistoricoTransacoes.Size = new Size(794, 32);
             LabelHistoricoTransacoes.TabIndex = 4;
             LabelHistoricoTransacoes.Text = "Login";
             LabelHistoricoTransacoes.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // inputTexto1
+            // NomeUsuario
             // 
-            inputTexto1.Anchor = AnchorStyles.None;
-            inputTexto1.Label = "Nome de Usuário";
-            inputTexto1.Location = new Point(149, 141);
-            inputTexto1.Margin = new Padding(4, 5, 4, 5);
-            inputTexto1.Name = "inputTexto1";
-            inputTexto1.Size = new Size(502, 53);
-            inputTexto1.TabIndex = 5;
-            inputTexto1.Texto = "";
-            inputTexto1.TratarComoSenha = false;
+            NomeUsuario.Anchor = AnchorStyles.None;
+            NomeUsuario.Label = "Nome de Usuário";
+            NomeUsuario.Location = new Point(149, 131);
+            NomeUsuario.Margin = new Padding(4, 5, 4, 5);
+            NomeUsuario.Name = "NomeUsuario";
+            NomeUsuario.Size = new Size(502, 53);
+            NomeUsuario.TabIndex = 5;
+            NomeUsuario.Texto = "";
+            NomeUsuario.TratarComoSenha = false;
             // 
-            // inputTexto3
+            // Senha
             // 
-            inputTexto3.Anchor = AnchorStyles.None;
-            inputTexto3.Label = "Senha";
-            inputTexto3.Location = new Point(149, 253);
-            inputTexto3.Margin = new Padding(4, 5, 4, 5);
-            inputTexto3.Name = "inputTexto3";
-            inputTexto3.Size = new Size(502, 53);
-            inputTexto3.TabIndex = 7;
-            inputTexto3.Texto = "";
-            inputTexto3.TratarComoSenha = true;
+            Senha.Anchor = AnchorStyles.None;
+            Senha.Label = "Senha";
+            Senha.Location = new Point(149, 236);
+            Senha.Margin = new Padding(4, 5, 4, 5);
+            Senha.Name = "Senha";
+            Senha.Size = new Size(502, 53);
+            Senha.TabIndex = 7;
+            Senha.Texto = "";
+            Senha.TratarComoSenha = true;
             // 
             // BotaoLogin
             // 
@@ -101,13 +104,25 @@
             BotaoLogin.FlatStyle = FlatStyle.Flat;
             BotaoLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             BotaoLogin.ForeColor = Color.FromArgb(5, 6, 63);
-            BotaoLogin.Location = new Point(342, 376);
+            BotaoLogin.Location = new Point(342, 350);
             BotaoLogin.Name = "BotaoLogin";
             BotaoLogin.Size = new Size(116, 34);
             BotaoLogin.TabIndex = 1;
             BotaoLogin.Text = "Logar";
             BotaoLogin.UseVisualStyleBackColor = false;
             BotaoLogin.Click += BotaoLogin_Click;
+            // 
+            // LinkCadastro
+            // 
+            LinkCadastro.Anchor = AnchorStyles.None;
+            LinkCadastro.AutoSize = true;
+            LinkCadastro.Location = new Point(343, 427);
+            LinkCadastro.Name = "LinkCadastro";
+            LinkCadastro.Size = new Size(113, 15);
+            LinkCadastro.TabIndex = 8;
+            LinkCadastro.TabStop = true;
+            LinkCadastro.Text = "Não possui usuário?";
+            LinkCadastro.LinkClicked += LinkCadastro_LinkClicked;
             // 
             // Login
             // 
@@ -125,9 +140,10 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private Componentes.InputTexto inputTexto3;
+        private Componentes.InputTexto Senha;
         private Label LabelHistoricoTransacoes;
-        private Componentes.InputTexto inputTexto1;
+        private Componentes.InputTexto NomeUsuario;
         private Componentes.BotaoPrimario BotaoLogin;
+        private LinkLabel LinkCadastro;
     }
 }
