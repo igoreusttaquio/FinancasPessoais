@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using EmbeddedForms;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace UI.Services;
 
@@ -16,7 +17,7 @@ public class NavigationService : INavigationService
     }
     public void InitializeContainer(Control container)
     {
-        this.container = container;
+        this.container ??= container;
     }
 
     public void GoBack()
@@ -34,6 +35,8 @@ public class NavigationService : INavigationService
     public void NavigateTo<T>() where T : Form
     {
         var form = serviceProvider.GetRequiredService<T>();
+        if (form.GetType() == typeof(Main)) return;
+
         form.TopLevel = false;
         form.FormBorderStyle = FormBorderStyle.None;
         form.Dock = DockStyle.Fill;
@@ -47,12 +50,5 @@ public class NavigationService : INavigationService
         container.Controls.Add(form);
         form.Show();
         currentForm = form;
-    }
-
-    public void Pop()
-    {
-        while (navigationStack.Count > 0) {
-            navigationStack.Pop();
-        }
     }
 }

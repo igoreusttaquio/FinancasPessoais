@@ -1,22 +1,20 @@
-﻿using EmbeddedForms;
-using UI.Services;
+﻿using UI.Services;
 
 namespace UI
 {
     public partial class Login : Form
     {
-        INavigationService _navigationService;
-        public Login(INavigationService navigationService)
+        ILogin _login;
+        public Login(ILogin login)
         {
             InitializeComponent();
-            _navigationService = navigationService;
+            _login = login;
         }
 
         private void BotaoLogin_Click(object sender, EventArgs e)
         {
-            _navigationService.Pop();
             Program.Logado = true;
-            _navigationService.NavigateTo<Main>();
+            _login.PerformarLogin();
         }
     }
 }

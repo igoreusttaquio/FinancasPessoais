@@ -28,7 +28,7 @@ internal static class Program
 
     static void ConfigureFormularios(IServiceCollection servicos)
     {
-        servicos.AddTransient<Main>();
+        servicos.AddSingleton<Main>();
         servicos.AddTransient<Login>();
         servicos.AddTransient<Registrar>();
         servicos.AddTransient<DashBoard>();
@@ -37,6 +37,7 @@ internal static class Program
         servicos.AddTransient<Categorias>();
         servicos.AddSingleton<IDateTimeProvider, DateTimeProvider>(); // Example service
         servicos.AddSingleton<INavigationService, NavigationService>();
+        servicos.AddSingleton<ILogin, LoginServico>();
         IncluirModais(servicos);
     }
 
@@ -47,5 +48,5 @@ internal static class Program
         servicos.AddTransient<ContaModal>();
     }
 
-    internal static bool Logado {  get; set; } = false;
+    internal static bool Logado { get; set; } = false;
 }
