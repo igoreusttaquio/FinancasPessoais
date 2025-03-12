@@ -22,4 +22,5 @@ public class BancoDadosContexto : DbContext
     public DbSet<Conta> Contas { get; set; }
     public DbSet<Categoria> Categorias { get; set; }
     public DbSet<Transacao> Transacoes { get; set; }
+    public DbSet<Usuario> Usuarios { get; set; }
 }

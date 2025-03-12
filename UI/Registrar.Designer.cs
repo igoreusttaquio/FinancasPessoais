@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            inputTexto4 = new Componentes.InputTexto();
-            inputTexto3 = new Componentes.InputTexto();
-            inputTexto2 = new Componentes.InputTexto();
+            Nome = new Componentes.InputTexto();
             LabelHistoricoTransacoes = new Label();
-            inputTexto1 = new Componentes.InputTexto();
-            botaoPrimario1 = new Componentes.BotaoPrimario();
+            Login = new LinkLabel();
+            BotaoCadastrar = new Componentes.BotaoPrimario();
+            Senha2 = new Componentes.InputTexto();
+            Senha1 = new Componentes.InputTexto();
+            Email = new Componentes.InputTexto();
+            NomeUsuario = new Componentes.InputTexto();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -43,61 +45,40 @@
             tableLayoutPanel1.BackColor = Color.FromArgb(31, 41, 55);
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(inputTexto4, 0, 4);
-            tableLayoutPanel1.Controls.Add(inputTexto3, 0, 3);
-            tableLayoutPanel1.Controls.Add(inputTexto2, 0, 2);
+            tableLayoutPanel1.Controls.Add(Nome, 0, 1);
             tableLayoutPanel1.Controls.Add(LabelHistoricoTransacoes, 0, 0);
-            tableLayoutPanel1.Controls.Add(inputTexto1, 0, 1);
-            tableLayoutPanel1.Controls.Add(botaoPrimario1, 0, 5);
+            tableLayoutPanel1.Controls.Add(Login, 0, 7);
+            tableLayoutPanel1.Controls.Add(BotaoCadastrar, 0, 6);
+            tableLayoutPanel1.Controls.Add(Senha2, 0, 5);
+            tableLayoutPanel1.Controls.Add(Senha1, 0, 4);
+            tableLayoutPanel1.Controls.Add(Email, 0, 3);
+            tableLayoutPanel1.Controls.Add(NomeUsuario, 0, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 6;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 16.666666F));
-            tableLayoutPanel1.Size = new Size(1143, 750);
+            tableLayoutPanel1.RowCount = 8;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 11.6931705F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.7094889F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.7094889F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.7094889F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.7094889F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 14.7094889F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.10726452F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 6.65211535F));
+            tableLayoutPanel1.Size = new Size(800, 450);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // inputTexto4
+            // Nome
             // 
-            inputTexto4.Anchor = AnchorStyles.None;
-            inputTexto4.Label = "Confirmar Senha";
-            inputTexto4.Location = new Point(213, 518);
-            inputTexto4.Margin = new Padding(6, 8, 6, 8);
-            inputTexto4.Name = "inputTexto4";
-            inputTexto4.Size = new Size(717, 88);
-            inputTexto4.TabIndex = 8;
-            inputTexto4.Texto = "";
-            inputTexto4.TratarComoSenha = true;
-            // 
-            // inputTexto3
-            // 
-            inputTexto3.Anchor = AnchorStyles.None;
-            inputTexto3.Label = "Senha";
-            inputTexto3.Location = new Point(213, 393);
-            inputTexto3.Margin = new Padding(6, 8, 6, 8);
-            inputTexto3.Name = "inputTexto3";
-            inputTexto3.Size = new Size(717, 88);
-            inputTexto3.TabIndex = 7;
-            inputTexto3.Texto = "";
-            inputTexto3.TratarComoSenha = true;
-            // 
-            // inputTexto2
-            // 
-            inputTexto2.Anchor = AnchorStyles.None;
-            inputTexto2.Label = "E-mail";
-            inputTexto2.Location = new Point(213, 268);
-            inputTexto2.Margin = new Padding(6, 8, 6, 8);
-            inputTexto2.Name = "inputTexto2";
-            inputTexto2.Size = new Size(717, 88);
-            inputTexto2.TabIndex = 6;
-            inputTexto2.Texto = "";
-            inputTexto2.TratarComoSenha = false;
+            Nome.Anchor = AnchorStyles.None;
+            Nome.Label = "Seu nome";
+            Nome.Location = new Point(149, 62);
+            Nome.Margin = new Padding(4, 5, 4, 5);
+            Nome.Name = "Nome";
+            Nome.Size = new Size(502, 46);
+            Nome.TabIndex = 10;
+            Nome.Texto = "";
+            Nome.TratarComoSenha = false;
             // 
             // LabelHistoricoTransacoes
             // 
@@ -105,49 +86,95 @@
             LabelHistoricoTransacoes.AutoSize = true;
             LabelHistoricoTransacoes.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             LabelHistoricoTransacoes.ForeColor = SystemColors.ButtonHighlight;
-            LabelHistoricoTransacoes.Location = new Point(4, 38);
-            LabelHistoricoTransacoes.Margin = new Padding(4, 0, 4, 0);
+            LabelHistoricoTransacoes.Location = new Point(3, 10);
             LabelHistoricoTransacoes.Name = "LabelHistoricoTransacoes";
-            LabelHistoricoTransacoes.Size = new Size(1135, 48);
+            LabelHistoricoTransacoes.Size = new Size(794, 32);
             LabelHistoricoTransacoes.TabIndex = 4;
             LabelHistoricoTransacoes.Text = "Registrar";
             LabelHistoricoTransacoes.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // inputTexto1
+            // Login
             // 
-            inputTexto1.Anchor = AnchorStyles.None;
-            inputTexto1.Label = "Nome de Usuário";
-            inputTexto1.Location = new Point(213, 143);
-            inputTexto1.Margin = new Padding(6, 8, 6, 8);
-            inputTexto1.Name = "inputTexto1";
-            inputTexto1.Size = new Size(717, 88);
-            inputTexto1.TabIndex = 5;
-            inputTexto1.Texto = "";
-            inputTexto1.TratarComoSenha = false;
+            Login.Anchor = AnchorStyles.None;
+            Login.AutoSize = true;
+            Login.Location = new Point(381, 426);
+            Login.Name = "Login";
+            Login.Size = new Size(37, 15);
+            Login.TabIndex = 9;
+            Login.TabStop = true;
+            Login.Text = "Login";
+            Login.LinkClicked += Login_LinkClicked;
             // 
-            // botaoPrimario1
+            // BotaoCadastrar
             // 
-            botaoPrimario1.Anchor = AnchorStyles.None;
-            botaoPrimario1.BackColor = Color.FromArgb(100, 111, 229);
-            botaoPrimario1.FlatAppearance.BorderSize = 0;
-            botaoPrimario1.FlatStyle = FlatStyle.Flat;
-            botaoPrimario1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            botaoPrimario1.ForeColor = Color.FromArgb(5, 6, 63);
-            botaoPrimario1.Location = new Point(488, 659);
-            botaoPrimario1.Margin = new Padding(4, 5, 4, 5);
-            botaoPrimario1.Name = "botaoPrimario1";
-            botaoPrimario1.Size = new Size(166, 57);
-            botaoPrimario1.TabIndex = 1;
-            botaoPrimario1.Text = "Cadastrar";
-            botaoPrimario1.UseVisualStyleBackColor = false;
+            BotaoCadastrar.Anchor = AnchorStyles.None;
+            BotaoCadastrar.BackColor = Color.FromArgb(100, 111, 229);
+            BotaoCadastrar.FlatAppearance.BorderSize = 0;
+            BotaoCadastrar.FlatStyle = FlatStyle.Flat;
+            BotaoCadastrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            BotaoCadastrar.ForeColor = Color.FromArgb(5, 6, 63);
+            BotaoCadastrar.Location = new Point(342, 385);
+            BotaoCadastrar.Name = "BotaoCadastrar";
+            BotaoCadastrar.Size = new Size(116, 30);
+            BotaoCadastrar.TabIndex = 1;
+            BotaoCadastrar.Text = "Cadastrar";
+            BotaoCadastrar.UseVisualStyleBackColor = false;
+            BotaoCadastrar.Click += BotaoCadastrar_Click;
+            // 
+            // Senha2
+            // 
+            Senha2.Anchor = AnchorStyles.None;
+            Senha2.Label = "Confirmar senha";
+            Senha2.Location = new Point(149, 326);
+            Senha2.Margin = new Padding(4, 5, 4, 5);
+            Senha2.Name = "Senha2";
+            Senha2.Size = new Size(502, 46);
+            Senha2.TabIndex = 8;
+            Senha2.Texto = "";
+            Senha2.TratarComoSenha = true;
+            // 
+            // Senha1
+            // 
+            Senha1.Anchor = AnchorStyles.None;
+            Senha1.Label = "Senha";
+            Senha1.Location = new Point(149, 260);
+            Senha1.Margin = new Padding(4, 5, 4, 5);
+            Senha1.Name = "Senha1";
+            Senha1.Size = new Size(502, 46);
+            Senha1.TabIndex = 7;
+            Senha1.Texto = "";
+            Senha1.TratarComoSenha = true;
+            // 
+            // Email
+            // 
+            Email.Anchor = AnchorStyles.None;
+            Email.Label = "E-mail";
+            Email.Location = new Point(149, 194);
+            Email.Margin = new Padding(4, 5, 4, 5);
+            Email.Name = "Email";
+            Email.Size = new Size(502, 46);
+            Email.TabIndex = 6;
+            Email.Texto = "";
+            Email.TratarComoSenha = false;
+            // 
+            // NomeUsuario
+            // 
+            NomeUsuario.Anchor = AnchorStyles.None;
+            NomeUsuario.Label = "Nome de Usuário";
+            NomeUsuario.Location = new Point(149, 128);
+            NomeUsuario.Margin = new Padding(4, 5, 4, 5);
+            NomeUsuario.Name = "NomeUsuario";
+            NomeUsuario.Size = new Size(502, 46);
+            NomeUsuario.TabIndex = 5;
+            NomeUsuario.Texto = "";
+            NomeUsuario.TratarComoSenha = false;
             // 
             // Registrar
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1143, 750);
+            ClientSize = new Size(800, 450);
             Controls.Add(tableLayoutPanel1);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "Registrar";
             Text = "Registrar";
             tableLayoutPanel1.ResumeLayout(false);
@@ -158,11 +185,13 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
-        private Componentes.InputTexto inputTexto4;
-        private Componentes.InputTexto inputTexto3;
-        private Componentes.InputTexto inputTexto2;
+        private Componentes.InputTexto Senha2;
+        private Componentes.InputTexto Senha1;
+        private Componentes.InputTexto Email;
         private Label LabelHistoricoTransacoes;
-        private Componentes.InputTexto inputTexto1;
-        private Componentes.BotaoPrimario botaoPrimario1;
+        private Componentes.InputTexto NomeUsuario;
+        private Componentes.BotaoPrimario BotaoCadastrar;
+        private LinkLabel Login;
+        private Componentes.InputTexto Nome;
     }
 }
